@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: auto;
+}
+
+#wrapper {
+    position: relative;
+    margin: 10px auto;
+    width: 800px;
+    min-height: 600px;
+    background-color: #767676;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+a {
+    display: block;
+    text-decoration-line: none;
+    color: wheat;
+    font-size: 20px;
+    padding: 10px 50px;
+    transition: all 500ms;
+    margin: 5px 100px;
+    border-top: solid wheat 3px;
+    border-bottom: solid wheat 3px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+}
+
+main > div {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin-top: 10px;
+    border-top: solid antiquewhite 1px;
+    border-bottom: solid antiquewhite 1px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-style: italic;
+    color: antiquewhite;
+}
+
+#clear {
+    display: block;
+    padding: 3px 20px;
+    margin-bottom: 30px;
+    width: 120px;
+    color: wheat;
+    background-color: #6b6b6b;
+    border: solid #8b8b8b 3px;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 500ms;
+}
+
+.buttons {
+    margin-bottom: 0;
+    opacity: 0;
+    transition: all 500ms;
+}
+
+.del, .edit {
+    padding: 3px 20px;
+    width: 120px;
+    color: wheat;
+    background-color: #818181;
+    border: solid #8b8b8b 3px;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 5px;
+    margin: 10px 10px 2px;;
+    float: right;
+    letter-spacing: 1px;
+    transition: all 500ms;
+}
+
+.edit {
+    float: left;
+}
+
+button:hover, #clear:hover, a:hover {
+    border-color: #00e4ff;
+    color: #00e4ff;
+}
+
+.entireDiv:hover .buttons {
+    opacity: 1;
+}
+
+h1 {
+    position: relative;
+    margin: -15px auto -5px;
+    text-align: center;
+    color: #9c9c9c;
+    font-size: 90px;
+    z-index: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .buttons {
+        opacity: 0.5;
+    }
+
+    #wrapper {
+        margin: 0 auto;
+        width: 550px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .del, .edit {
+        width: 80px;
+        padding: 2px;
+        margin: 10px 10px 2px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #wrapper {
+        width: 100%;
+    }
+
+    a {
+        font-size: 15px;
+        margin: 5px;
+        letter-spacing: 2px;
+    }
+
+    main > div {
+        font-size: 16px;
+    }
+}
